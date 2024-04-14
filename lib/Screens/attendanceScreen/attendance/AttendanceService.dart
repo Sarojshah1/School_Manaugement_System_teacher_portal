@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../../../model/AttendanceModel.dart';
 
 class AttendanceService {
-  final String baseUrl = 'http://192.168.56.1:7000/Add_attendance';
+  final String baseUrl = 'https://school-management-system-backend-eight.vercel.app/Add_attendance';
 
   Future<void> addAttendance(List<Attendance> attendances) async {
     final List<Map<String, dynamic>> jsonData =

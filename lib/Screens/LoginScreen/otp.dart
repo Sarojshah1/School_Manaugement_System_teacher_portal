@@ -23,7 +23,7 @@ class _SendOTPPageState extends State<SendOTPPage> {
   List<dynamic> teacher = [];
 
   Future<void> fetchteacher(String contact) async {
-    final response = await http.get(Uri.parse('http://192.168.56.1:7000/Users'));
+    final response = await http.get(Uri.parse('https://school-management-system-backend-eight.vercel.app/Users'));
     final jsonData = jsonDecode(response.body);
     setState(() {
       teacher = jsonData['user'].where((teacher) => teacher['phonenumber'] == contact).toList();
@@ -108,7 +108,7 @@ class EmailBloc {
   Future<void> sendEmail(String email) async {
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.56.1:7000/otp'),
+        Uri.parse('https://school-management-system-backend-eight.vercel.app/otp'),
         body: {
           'email': email,
         },

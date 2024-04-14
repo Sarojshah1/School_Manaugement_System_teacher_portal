@@ -4,7 +4,7 @@ import 'package:teacherportal/model/resultModel.dart';
 
 
 class ResultService {
-  final String baseUrl = 'http://192.168.56.1:7000/Add_marks';
+  final String baseUrl = 'https://school-management-system-backend-eight.vercel.app/Add_marks';
 
   Future<void> addResult(List<Result> results) async {
     final List<Map<String, dynamic>> jsonData =

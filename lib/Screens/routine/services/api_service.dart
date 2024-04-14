@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../../../model/routine.dart';
 class RoutineRepository {
   Future<List<Routine>> getRoutine() async {
-    final response = await http.get(Uri.parse('http://192.168.56.1:7000/routine'));
+    final response = await http.get(Uri.parse('https://school-management-system-backend-eight.vercel.app/routine'));
     print(response.body);
     if (response.statusCode == 200) {
       print("hello from 200");

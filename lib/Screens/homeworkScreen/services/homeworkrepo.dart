@@ -12,7 +12,7 @@ class AssignmentRepository {
     required String dueDate,
     required String className,
   }) async {
-    final url = Uri.parse('http://192.168.56.1:7000/Add_assignment');
+    final url = Uri.parse('https://school-management-system-backend-eight.vercel.app/Add_assignment');
     final Map<String, String> headers = {'Content-Type': 'application/json'};
     final Map<String, dynamic> body = {
       'subject': subject,

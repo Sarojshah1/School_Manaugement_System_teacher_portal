@@ -28,7 +28,7 @@ class _ClassMarksScreenState extends State<ClassMarksScreen> {
   List<String> subjects = []; // List to hold subject names fetched from the backend
   String? _selectedSubject;
   Future<void> fetchSubjects() async {
-    final url = Uri.parse('http://192.168.56.1:7000/Subjects');
+    final url = Uri.parse('https://school-management-system-backend-eight.vercel.app/Subjects');
     final response = await http.get(url);
     print(response.body);
 

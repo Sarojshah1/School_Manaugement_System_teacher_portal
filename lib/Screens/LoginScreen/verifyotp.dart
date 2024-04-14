@@ -33,7 +33,7 @@ class _VerifyOTPPageState extends State<VerifyOTPPage> {
     try {
       // Make API call to check OTP
       final response = await http.post(
-        Uri.parse('http://192.168.56.1:7000/verify'),
+        Uri.parse('https://school-management-system-backend-eight.vercel.app/verify'),
         body: {
           'email': widget.phoneNumber,
           'otp': otp,

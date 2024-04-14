@@ -15,8 +15,8 @@ class AuthService {
   AuthService({required this.baseUrl});
 
   Future<String> login({required String username, required String password}) async {
-    final loginUrl = Uri.parse('http://192.168.56.1:7000/users/login');
-    final profileUrl = Uri.parse('http://192.168.56.1:7000/user/$username');
+    final loginUrl = Uri.parse('https://school-management-system-backend-eight.vercel.app/users/login');
+    final profileUrl = Uri.parse('https://school-management-system-backend-eight.vercel.app/user/$username');
 
     try {
       // Login request

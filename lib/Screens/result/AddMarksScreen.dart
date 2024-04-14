@@ -27,7 +27,7 @@ late ResultBloc _resultBloc;
   List<dynamic> students = [];
 
   Future<void> fetchStudents() async {
-    final response = await http.get(Uri.parse('http://192.168.56.1:7000/Students'));
+    final response = await http.get(Uri.parse('https://school-management-system-backend-eight.vercel.app/Students'));
     final jsonData = jsonDecode(response.body);
     setState(() {
       students = jsonData['students'].where((student) => student['className'] == ResultClassNameManager().className).toList();
@@ -121,7 +121,7 @@ late ResultBloc _resultBloc;
             }
             print(marksList);
             _resultBloc.add(AddResult(marksList));
-
+            VxToast.show(context, msg: "marks insterded successfully");
           },
           child:const Icon(Icons.check),
         ),
